@@ -1,0 +1,15 @@
+// .grid {
+//   height: 100%; // This ensures that the grid takes the full height
+
+//   .carousel-image {
+//       height: 100vh; // This will set the carousel image height to the full viewport height
+//       object-fit: cover;
+//   }
+// }
+
+
+.p-carousel-items-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh!important;
+}

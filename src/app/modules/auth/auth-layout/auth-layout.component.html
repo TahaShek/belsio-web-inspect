@@ -1,0 +1,21 @@
+<div class="grid grid-cols-1  lg:grid-cols-2 items-center h-screen lg:bg-none">
+
+  <!-- Left Side ( Form) -->
+  <div class="flex justify-center items-center sm:rounded-2xl md:rounded-none sm:shadow md:shadow-none md:bg-card sm:bg-card h-full">
+    <div class=" w-80">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="hidden md:hidden lg:flex items-center justify-center  overflow-hidden dark:border-l  min-h-screen">
+    <p-carousel [value]="images" [numVisible]="1" [numScroll]="3" [circular]="false" [autoplayInterval]="3000" [showIndicators]="false" [showNavigators]="false" [numScroll]="1"  styleClass="h-[100vh]" >
+      <ng-template let-img pTemplate="item">
+          <img [src]="img.url" alt="Carousel Image"  />
+      </ng-template>
+  </p-carousel>
+
+
+  </div>
+
+</div>

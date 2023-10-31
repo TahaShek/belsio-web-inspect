@@ -1,0 +1,93 @@
+        <div class="flex justify-center">
+          <img
+            src="../../../../assets/Belsons-Technologies-logo-1 1.svg"
+            width="400"
+            alt=""
+          />
+        </div>
+        <!-- Sign in form -->
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+          <!-- Email field -->
+          <div class="mt-6">
+            <label
+              for="email"
+              class="block text-xs font-medium cursor-pointer text-[#5B5B5B]"
+              >User Name
+            </label>
+            <div class="mt-1">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                formControlName="userName"
+                (keypress)="preventSpaces($event)"
+                [ngClass]="{
+                  'border-red-500':
+                    f['userName'].errors &&
+                    (f['userName'].dirty || f['userName'].touched)
+                }"
+                class="appearance-none block w-full px-3 py-[6px] border border-gray-300 placeholder-gray-500 placeholder:text-xs text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-200 sm:text-sm rounded-[4px]"
+              />
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label
+              for="password"
+              class="block text-xs font-medium cursor-pointer text-[#5B5B5B]"
+              >Password
+            </label>
+            <div class="mt-1 relative">
+              <input
+                id="password"
+                name="password"
+                [type]="passwordVisible ? 'text' : 'password'"
+                formControlName="password"
+                [ngClass]="{
+                  'border-red-500':
+                    f['password'].errors &&
+                    (f['password'].dirty || f['password'].touched)
+                }"
+                class="appearance-none block w-full px-3 py-[6px] border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-200 sm:text-sm rounded-[4px]"
+              />
+              <span
+                class="eye-icon absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                (click)="togglePasswordVisibility()"
+              >
+                <i class="pi pi-eye" *ngIf="!passwordVisible"></i>
+                <i class="pi pi-eye-slash" *ngIf="passwordVisible"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div
+            class="inline-flex text-xs mt-4 items-end cursor-pointer text-[#A8A8A8] justify-between w-full"
+          >
+            <div class="flex">
+              <input type="checkbox" />
+              <a class="mx-2">Remember Me</a>
+            </div>
+            <a
+              class="text-md text-xs text-primary-500 hover:underline"
+
+            >
+              Forgot password?
+            </a>
+          </div>
+
+          <!-- Submit button -->
+          <button
+            class="flex justify-center items-center text-white rounded-[4px] bg-[#004998] min-h-[36px] w-full mt-6"
+            [disabled]="!form.valid"
+            [ngClass]="!form.valid ? 'cursor-not-allowed' : 'cursor-pointer'"
+            type="submit"
+          >
+            <mat-spinner
+              class="white-spinner"
+              diameter="20"
+              *ngIf="isLoading"
+            ></mat-spinner>
+            <span *ngIf="!isLoading">Login</span>
+          </button>
+        </form>
