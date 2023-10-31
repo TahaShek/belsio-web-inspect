@@ -3,8 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  title: '',
+  production: false,
+  apiUrl: '',
+  debugLog: true,
+  errorToasts: true,
+  appVersion: 'v1.0.1',
+  USERDATA_KEY: '',
+  SESSION_STORAGE_PREFIX: '',
+  defaultTenant: 'root',
+  baseUrl: '', // Add this line
+
+}
+
 
 /*
  * For easier debugging in development mode, you can import the following file
