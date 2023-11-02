@@ -7,6 +7,7 @@
             import { FormBuilder, FormGroup, Validators } from '@angular/forms';
             import { Router } from '@angular/router';
             import { ToastrService } from 'ngx-toastr';
+             import { EcryptionDecrytionService } from 'src/app/services/global/ecryption-decrytion.service';
 
             @Component({
               selector: 'app-login',
@@ -23,7 +24,8 @@
                 private formBuiler: FormBuilder,
                 private cdr: ChangeDetectorRef,
                 private router: Router,
-                private toast: ToastrService
+                private toast: ToastrService,
+                private encrypt:EcryptionDecrytionService
               ) {}
 
               ngOnInit(): void {

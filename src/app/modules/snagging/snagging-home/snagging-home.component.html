@@ -1,0 +1,206 @@
+
+<div class="flex justify-between">
+  <div class="font-bold">
+    Snagging Home
+  </div>
+  <div class="relative">
+    <input
+    id="label"
+    name="label"
+    type="type"
+    placeholder="Search"
+    class="appearance-none block w-full px-3 py-[6px] border border-gray-300 placeholder-gray-500 placeholder:text-xs text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-200 sm:text-sm rounded-[4px]"
+    />
+    <span class="absolute right-3 top-2">
+      <i class='bx bx-search'></i>
+    </span>
+  </div>
+
+</div>
+
+<div class="mb-6 mt-6">
+  <div class="flex justify-between">
+
+  <div class="flex  space-x-10">
+    <ng-container *ngFor="let status of statusOptions">
+      <div
+        class="cursor-pointer text-sm"
+        (click)="setActiveStatus(status)"
+        [ngClass]="{ 'border-b-2 border-black': activeStatus === status }"
+      >
+        {{ status }}
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="flex space-x-4">
+    <button class="white border border-[#004998] ">
+      Subscribe
+    </button>
+    <button class="white border border-[#004998] ">
+      Snagging
+    </button>
+    <button class="blue">
+      Add New Project
+    </button>
+
+  </div>
+
+  </div>
+</div>
+
+
+ <!-- component  -->
+<div class="flex lg:flex-row flex-col gap-4 rounded-lg mt-4">
+  <div class="basis-2/4 w-full rounded-2xl bg-white min-h-[40vh]">
+    <div class="p-5">
+      <div class="font-semibold mb-3">
+        Project Name
+      </div>
+      <div>
+        <img src="../../../../assets/Frame 1486472.png" alt="" />
+      </div>
+
+      <div class="flex gap-3 mt-1">
+        <div class="basis-2/5 w-full">
+          <div class="bg-[#FAFAFA] p-3 text-xs rounded-md">
+            <div class="flex justify-between">
+              <div>Project Code</div>
+              <div class="font-bold">00062-695CoC</div>
+            </div>
+            <div class="flex justify-between mt-3">
+              <div>Start Date</div>
+              <div class="font-bold">DD/MM/YYYY</div>
+            </div>
+
+            <div class="flex justify-between mt-3">
+              <div>End Date</div>
+              <div class="font-bold">DD/MM/YYYY</div>
+            </div>
+          </div>
+
+          <div class="bg-[#FAFAFA] p-3 text-xs mt-4 rounded-md">
+            <div class="flex justify-between">
+              <div>Milestone</div>
+              <div class="font-semibold text-orange-600">Delayed</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="basis-3/5 w-full">
+          <div class="flex gap-4 ">
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+              <div class="text-black font-bold">123</div>
+              <div class="text-black text-xs">Total Units</div>
+            </div>
+
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+              <div class="text-black font-bold">123</div>
+              <div class="text-black text-xs">Total Units</div>
+            </div>
+
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+              <div class="text-black font-bold">123</div>
+              <div class="text-black text-xs">Total Units</div>
+            </div>
+          </div>
+
+          <div class="bg-[#FAFAFA] p-3 text-xs mt-4 rounded-md">
+            <div class="flex justify-between">
+              <div>
+                <div>Completed</div>
+                <div class="text-xl mt-3  font-bold">100%</div>
+              </div>
+              <div class="">
+                <mat-progress-spinner
+                  class="progress-spinner"
+                  [color]="'warn'"
+                  diameter="50"
+                  mode="determinate"
+                  [value]="progressValue"
+                >
+                </mat-progress-spinner>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="basis-2/4 w-full rounded-2xl bg-white min-h-[40vh]">
+    <div class="p-5">
+      <div class="font-semibold mb-3">
+        Project Name
+      </div>
+      <div>
+        <img src="../../../../assets/Frame 1486472.png" alt="" />
+      </div>
+
+      <div class="flex gap-3 mt-1">
+        <div class="basis-2/5 w-full">
+          <div class="bg-[#FAFAFA] p-3 text-xs rounded-md">
+            <div class="flex justify-between">
+              <div>Project Code</div>
+              <div class="font-bold">00062-695CoC</div>
+            </div>
+            <div class="flex justify-between mt-3">
+              <div>Start Date</div>
+              <div class="font-bold">DD/MM/YYYY</div>
+            </div>
+
+            <div class="flex justify-between mt-3">
+              <div>End Date</div>
+              <div class="font-bold">DD/MM/YYYY</div>
+            </div>
+          </div>
+
+          <div class="bg-[#FAFAFA] p-3 text-xs mt-4 rounded-md">
+            <div class="flex justify-between">
+              <div>Milestone</div>
+              <div class="font-semibold text-orange-600">Delayed</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="basis-3/5 w-full">
+          <div class="flex gap-4 ">
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+              <div class="text-black font-bold">123</div>
+              <div class="text-black text-xs">Total Units</div>
+            </div>
+
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+              <div class="text-black font-bold">123</div>
+              <div class="text-black text-xs">Total Units</div>
+            </div>
+
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+              <div class="text-black font-bold">123</div>
+              <div class="text-black text-xs">Total Units</div>
+            </div>
+          </div>
+
+          <div class="bg-[#FAFAFA] p-3 text-xs mt-4 rounded-md">
+            <div class="flex justify-between">
+              <div>
+                <div>Completed</div>
+                <div class="text-xl mt-3  font-bold">100%</div>
+              </div>
+              <div class="">
+                <mat-progress-spinner
+                  class="progress-spinner"
+                  [color]="'warn'"
+                  diameter="50"
+                  mode="determinate"
+                  [value]="progressValue"
+                >
+                </mat-progress-spinner>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

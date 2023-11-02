@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule, HttpParams } from '@angular/common/http';
 import { InterceptorProviders } from './core/interceptors';
+import { ThemeModule } from './modules/theme/theme.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { InterceptorProviders } from './core/interceptors';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ThemeModule,
     HttpClientModule,
 
     ToastrModule.forRoot({

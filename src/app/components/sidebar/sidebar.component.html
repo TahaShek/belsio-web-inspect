@@ -1,0 +1,47 @@
+<div class="h-screen relative duration-300 bg-white w-56">
+  <!-- Header Section -->
+  <div class="bg-white p-2 cursor-pointer">
+    <div class="flex gap-x-4 items-center">
+      <div (click)="toggleAdditionalSection()">
+        <img src="../../../assets/navbar-icons/Grid icon.png" alt="">
+      </div>
+      <div>
+        <img src="../../../assets/Belsons-Technologies-logo-1 1.svg" alt="" class="" />
+      </div>
+    </div>
+
+    <!-- Additional Section (hidden by default) -->
+    <div class="additional-section  absolute h-[100vh]" *ngIf="showAdditionalSection">
+      <ng-container>
+        <div class="p-2 mt-3">
+          <div class="check">
+          </div>
+        </div>
+        <div class="p-2 mt-3">
+          <div class="check">
+          </div>
+        </div>
+        <div class="p-2 mt-3">
+          <div class="check">
+          </div>
+        </div>
+        <div class="p-2 mt-3">
+          <div class="check">
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+<!-- Menu Items Section -->
+<div class="menu-container " [ngClass]="{'text-right': showAdditionalSection}">
+  <ng-container *ngFor="let menu of menus; let i = index">
+    <div class="p-2  cursor-pointer text-black text-base">
+      <div class="p-2 font-bold">
+        <span routerLink="">{{ menu.title }} </span>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+</div>
