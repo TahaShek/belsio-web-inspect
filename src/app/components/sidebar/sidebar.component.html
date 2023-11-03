@@ -1,47 +1,40 @@
-<div class="h-screen relative duration-300 bg-white w-56">
+<div class="h-screen relative bg-white w-56">
   <!-- Header Section -->
   <div class="bg-white p-2 cursor-pointer">
     <div class="flex gap-x-4 items-center">
       <div (click)="toggleAdditionalSection()">
-        <img src="../../../assets/navbar-icons/Grid icon.png" alt="">
+        <img src="../../../assets/navbar-icons/Grid icon.png" alt="" />
       </div>
       <div>
-        <img src="../../../assets/Belsons-Technologies-logo-1 1.svg" alt="" class="" />
+        <img
+          src="../../../assets/Belsons-Technologies-logo-1 1.svg"
+          alt=""
+          class=""
+        />
       </div>
-    </div>
-
-    <!-- Additional Section (hidden by default) -->
-    <div class="additional-section  absolute h-[100vh]" *ngIf="showAdditionalSection">
-      <ng-container>
-        <div class="p-2 mt-3">
-          <div class="check">
-          </div>
-        </div>
-        <div class="p-2 mt-3">
-          <div class="check">
-          </div>
-        </div>
-        <div class="p-2 mt-3">
-          <div class="check">
-          </div>
-        </div>
-        <div class="p-2 mt-3">
-          <div class="check">
-          </div>
-        </div>
-      </ng-container>
     </div>
   </div>
 
-<!-- Menu Items Section -->
-<div class="menu-container " [ngClass]="{'text-right': showAdditionalSection}">
-  <ng-container *ngFor="let menu of menus; let i = index">
-    <div class="p-2  cursor-pointer text-black text-base">
-      <div class="p-2 font-bold">
-        <span routerLink="">{{ menu.title }} </span>
-      </div>
+<div class="mt-4">
+    <!-- Additional Section (hidden by default) -->
+    <div class="absolute h-[100vh] shadow-lg" *ngIf="showAdditionalSection">
+      <ng-container *ngFor="let imageSrc of productImages">
+        <div class="p-2 mt-3">
+          <img [src]="imageSrc" alt="" />
+        </div>
+      </ng-container>
     </div>
-  </ng-container>
-</div>
 
+    <!-- Menu Items Section (sub-products) -->
+    <div
+      class="menu-container"
+      [ngClass]="{ 'text-center': showAdditionalSection }"
+    >
+      <ng-container *ngFor="let menu of subProductMenu; let i = index">
+        <div class="p-2 mt-3 cursor-pointer text-black font-semibold text-base">
+          <span [routerLink]="menu.routerlink">{{ menu.title }} </span>
+        </div>
+      </ng-container>
+    </div>
+</div>
 </div>

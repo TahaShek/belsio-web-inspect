@@ -5,6 +5,11 @@ import { PrimeModule } from 'src/app/components/prime.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatProgressSpinnerModule  } from '@angular/material/progress-spinner';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
+
 const COMPONENTS = [
 
 ];
@@ -19,13 +24,16 @@ const COMPONENTS = [
     ReactiveFormsModule,
     FormsModule,
     PrimeModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatButtonModule, MatMenuModule, MatIconModule
 
   ],
   exports:[
     NavbarComponent,
     SidebarComponent,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatButtonModule, MatMenuModule, MatIconModule
+
 
   ]
 })

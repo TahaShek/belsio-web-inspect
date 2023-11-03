@@ -1,6 +1,6 @@
 
-<div class="flex justify-between">
-  <div class="font-bold">
+<div class="flex justify-between mt-1">
+  <div class="font-semibold text-lg">
     Snagging Home
   </div>
   <div class="relative">
@@ -57,9 +57,15 @@
       <div class="font-semibold mb-3">
         Project Name
       </div>
-      <div>
-        <img src="../../../../assets/Frame 1486472.png" alt="" />
+      <div class="bg-cover bg-center h-32 relative" style="background-image: url('../assets/Banner\ Image.png')">
+        <div class="p-2">
+          <img src="../assets/Rectangle 34624134 (1).png" alt="" />
+        </div>
+
+        <!-- Small square for status -->
+        <div class="absolute top-1 right-2 w-4 h-4 bg-red-500  rounded-[4px]"></div>
       </div>
+
 
       <div class="flex gap-3 mt-1">
         <div class="basis-2/5 w-full">
@@ -88,23 +94,37 @@
         </div>
 
         <div class="basis-3/5 w-full">
-          <div class="flex gap-4 ">
-            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+          <div class="grid grid-cols-3  ">
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md  check text-left">
               <div class="text-black font-bold">123</div>
               <div class="text-black text-xs">Total Units</div>
             </div>
 
-            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md  check text-left">
               <div class="text-black font-bold">123</div>
               <div class="text-black text-xs">Total Units</div>
             </div>
 
-            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md  check text-left">
               <div class="text-black font-bold">123</div>
               <div class="text-black text-xs">Total Units</div>
             </div>
+
+
+
+
+
+            <!-- <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md  text-left">
+              <div class="text-black font-bold">123</div>
+              <div class="text-black text-xs">Total Units</div>
+            </div>
+
+            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md  text-left">
+              <div class="text-black font-bold">123</div>
+              <div class="text-black text-xs">Total Units</div>
+            </div> -->
           </div>
-
+<!--
           <div class="bg-[#FAFAFA] p-3 text-xs mt-4 rounded-md">
             <div class="flex justify-between">
               <div>
@@ -122,85 +142,17 @@
                 </mat-progress-spinner>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </div>
 
-  <div class="basis-2/4 w-full rounded-2xl bg-white min-h-[40vh]">
-    <div class="p-5">
-      <div class="font-semibold mb-3">
-        Project Name
-      </div>
-      <div>
-        <img src="../../../../assets/Frame 1486472.png" alt="" />
-      </div>
 
-      <div class="flex gap-3 mt-1">
-        <div class="basis-2/5 w-full">
-          <div class="bg-[#FAFAFA] p-3 text-xs rounded-md">
-            <div class="flex justify-between">
-              <div>Project Code</div>
-              <div class="font-bold">00062-695CoC</div>
-            </div>
-            <div class="flex justify-between mt-3">
-              <div>Start Date</div>
-              <div class="font-bold">DD/MM/YYYY</div>
-            </div>
 
-            <div class="flex justify-between mt-3">
-              <div>End Date</div>
-              <div class="font-bold">DD/MM/YYYY</div>
-            </div>
-          </div>
+  <
 
-          <div class="bg-[#FAFAFA] p-3 text-xs mt-4 rounded-md">
-            <div class="flex justify-between">
-              <div>Milestone</div>
-              <div class="font-semibold text-orange-600">Delayed</div>
-            </div>
-          </div>
-        </div>
 
-        <div class="basis-3/5 w-full">
-          <div class="flex gap-4 ">
-            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
-              <div class="text-black font-bold">123</div>
-              <div class="text-black text-xs">Total Units</div>
-            </div>
-
-            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
-              <div class="text-black font-bold">123</div>
-              <div class="text-black text-xs">Total Units</div>
-            </div>
-
-            <div class="bg-[#FAFAFA] p-3 rounded-md shadow-md w-[30%] text-left">
-              <div class="text-black font-bold">123</div>
-              <div class="text-black text-xs">Total Units</div>
-            </div>
-          </div>
-
-          <div class="bg-[#FAFAFA] p-3 text-xs mt-4 rounded-md">
-            <div class="flex justify-between">
-              <div>
-                <div>Completed</div>
-                <div class="text-xl mt-3  font-bold">100%</div>
-              </div>
-              <div class="">
-                <mat-progress-spinner
-                  class="progress-spinner"
-                  [color]="'warn'"
-                  diameter="50"
-                  mode="determinate"
-                  [value]="progressValue"
-                >
-                </mat-progress-spinner>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+
+

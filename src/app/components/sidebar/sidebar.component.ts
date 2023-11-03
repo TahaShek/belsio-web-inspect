@@ -19,15 +19,20 @@ interface Menu {
 export class SidebarComponent implements OnInit {
   showAdditionalSection = false; // Variable to control the visibility of the additional section
 
-  open =true;
-  menus: Menu[] = [
+  open =false;
+  productImages: string[] = [
+    '../assets/Logo1.png',
+    '../assets/Logo2.png',
+        // Add more product images as needed
+  ];
+
+  subProductMenu: any[] = [
     {
       title: 'Snagging',
-      src: '',
-      routerlink: '',
-      src1: '',
+      routerlink: '/snagging',
+      src1: 'path-to-sub-product-image-1',
     },
-
+    // Add more sub-product menu items as needed
   ];
 
   constructor(
@@ -42,9 +47,7 @@ export class SidebarComponent implements OnInit {
   logout() {
   }
   additionalItems = [
-    { title: 'Additional Item 1' },
-    { title: 'Additional Item 2' },
-    { title: 'Additional Item 3' }
+
   ];
 
   // Function to toggle the visibility of the additional section

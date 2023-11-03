@@ -18,4 +18,11 @@ export class SnaggingHomeComponent implements OnInit {
   setActiveStatus(status: string) {
     this.activeStatus = status;
   }
+    menuItems = [
+    { label: 'Profile' },
+    { label: 'Support' },
+    { label: 'Idea Box' },
+    { label: 'Logout' },
+    // Add more menu items as needed
+  ];
 }

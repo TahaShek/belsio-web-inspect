@@ -5,7 +5,7 @@
 export const environment = {
   title: '',
   production: false,
-  apiUrl: '',
+  apiUrl: 'http://BT-PMSV-DEV1:86',
   debugLog: true,
   errorToasts: true,
   appVersion: 'v1.0.1',

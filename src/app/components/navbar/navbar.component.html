@@ -1,5 +1,8 @@
 <nav class="bg-white p-4 ">
+
+
   <div class="container mx-auto flex justify-end items-center">
+
     <!-- User Info -->
     <div class="flex items-center space-x-4">
       <div class="relative flex items-center space-x-4 mr-10">
@@ -12,9 +15,18 @@
         <p class="text-xs text-right text-gray-500 ">Admin</p>
       </div>
       <div class="relative">
-        <img src="../assets/navbar-icons/6c9ce37584e7a78efa52c1e478e89bee.png" alt="Profile" class="w-8 h-8 rounded-full">
+        <img src="../assets/navbar-icons/6c9ce37584e7a78efa52c1e478e89bee.png"  [matMenuTriggerFor]="menu"  alt="Profile" class="cursor-pointer w-8 h-8 rounded-full">
         <span class="absolute bottom-0 right-0 w-2 h-2 bg-green-500 rounded-full"></span>
       </div>
     </div>
   </div>
 </nav>
+
+
+<mat-menu #menu="matMenu" class="check" >
+ <div class="z-100 text-[14px]  border-transparent drop-shadow-sm bg-white">
+  <button mat-menu-item *ngFor="let menuItem of menuItems">
+    <span>{{ menuItem.label }}</span>
+  </button>
+ </div>
+</mat-menu>
