@@ -101,20 +101,7 @@ import { BaseService } from 'src/app/services/api';
                 this.base.PostByPromise('AuthenticationWS/LoginWS',this.encryptedLoginData).then((res)=>{
 
                 } )
-                // this.http
-                // .post('http://BT-PMSV-DEV1:86/AuthenticationWS/LoginWS', loginData)
-                // .subscribe(
-                //   (response) => {
-                //     // Handle the API response here
-                //     console.log('API Response:', response);
-                //     this.isLoading = false;
-                //   },
-                //   (error) => {
-                //     // Handle errors here
-                //     console.error('API Error:', error);
-                //     this.isLoading = false;
-                //   }
-                // );
+
                 // else {
                 //   const formData = this.form.value;
 
@@ -150,14 +137,3 @@ import { BaseService } from 'src/app/services/api';
             }
 
 
-          //   "login": {
-
-          //     "username": "test@test.com",
-          //     "password": "abcd1234",
-          //     "programType": "Web",
-          //     "DeviceToken": "",
-          //     "rememberMe": true
-          // },
-          // "timeStamp": {
-          //     "responseDate": "1698831159319"
-          // }
